@@ -87,50 +87,7 @@ python test_core.py
 - **备份项目**: 导出项目配置和设备信息
 - **删除项目**: 彻底删除项目及其数据
 
-## 📁 项目结构
 
-```
-多编辑器管理工具/
-├── main.py                 # 程序入口
-├── setup_venv.py          # 环境配置脚本  
-├── test_core.py           # 核心功能测试
-├── README.md              # 项目说明
-├── replit.md              # 项目架构文档
-├── pyproject.toml         # 项目依赖配置
-│
-├── auth/                  # 授权验证模块
-│   ├── __init__.py
-│   └── validator.py       # 云端授权验证器
-│
-├── core/                  # 核心功能模块
-│   ├── __init__.py
-│   ├── project_manager.py # 项目管理器
-│   ├── editor_manager.py  # 编辑器管理器
-│   ├── device_spoofing.py # 设备伪装器
-│   └── data_cleaner.py    # 数据清理器
-│
-├── gui/                   # 图形界面模块
-│   ├── __init__.py
-│   ├── main_window.py     # 主窗口界面
-│   ├── auth_dialog.py     # 授权对话框
-│   └── project_dialog.py  # 项目配置对话框
-│
-├── models/                # 数据模型
-│   ├── __init__.py
-│   ├── project.py         # 项目数据模型
-│   └── device_info.py     # 设备信息模型
-│
-├── utils/                 # 工具模块
-│   ├── __init__.py
-│   ├── config.py          # 配置管理器
-│   ├── logger.py          # 日志系统
-│   └── exceptions.py      # 异常定义
-│
-├── data/                  # 应用数据目录
-├── projects/              # 项目配置目录
-├── logs/                  # 日志文件目录
-└── isolated_data/         # 隔离的编辑器数据
-```
 
 ## 🔧 技术特性
 
@@ -152,60 +109,10 @@ python test_core.py
 - **进程管理**: 优雅的进程启动和终止处理
 - **缓存机制**: 智能缓存减少重复计算
 
-## 🛠️ 开发指南
-
-### 代码规范
-- 每个代码文件不超过 400 行
-- 使用 Type Hints 提供类型信息
-- 完整的 docstring 文档注释
-- 符合 PEP 8 代码风格
-
-### 测试方法
-```bash
-# 运行核心功能测试
-python test_core.py
-
-# 运行特定组件测试
-python -m pytest tests/
-
-# 检查代码类型
-python -m mypy main.py
-```
-
-### 调试技巧
-- 查看日志文件: `logs/multi_editor_YYYYMMDD.log`
-- 启用详细日志: 修改 `utils/config.py` 中的日志级别
-- 使用测试模式: `python main.py --test`
 
 ## 🐛 故障排除
 
-### 常见问题
 
-**Q: 程序启动失败，提示无法创建GUI**
-A: 在无桌面环境的系统上，程序会自动切换到CLI测试模式。
-
-**Q: 编辑器无法启动或检测不到**
-A: 检查编辑器是否正确安装在系统PATH中。
-
-**Q: 授权验证失败**
-A: 确认网络连接正常，并检查提供的授权密钥是否正确。
-
-**Q: 项目数据丢失**  
-A: 检查 `projects/` 目录下的配置文件是否存在。
-
-### 日志分析
-程序运行时会在 `logs/` 目录生成详细日志：
-- `INFO`: 正常操作信息
-- `WARNING`: 警告信息，不影响运行
-- `ERROR`: 错误信息，需要关注处理
-
-## 🤝 贡献指南
-
-1. Fork 本项目仓库
-2. 创建功能分支 (`git checkout -b feature/new-feature`)
-3. 提交更改 (`git commit -am 'Add new feature'`)
-4. 推送到分支 (`git push origin feature/new-feature`)
-5. 创建 Pull Request
 
 ## 📄 许可证
 
