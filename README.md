@@ -1,5 +1,7 @@
 # 多编辑器管理工具
 
+https://www.douyin.com/user/self?from_tab_name=main&modal_id=7539884476013301007
+
 一个基于 Python 的多编辑器管理工具，支持 VS Code、Cursor 和 Windsurf 的多实例隔离运行，通过设备标识伪装绕过AI编程助手的设备检测限制。
 
 ## ✨ 核心功能
